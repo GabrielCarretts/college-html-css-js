@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User Register Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>New User Register Form</h1>
+    </header>
+    <form method="POST">
+        <fieldset>
+            <legend>Personal Data</legend>
+            <div>
+                <label for="full_name">Full Name:</label>
+                <input required type="text" id="full_name" name="full_name" placeholder="John Smith">
+            </div>
+            <div>
+                <label for="user_city">City of Residence:</label>
+                <input required type="text" id="user_city" name="city" placeholder="e.g., New York">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input required type="email" id="email" name="email" placeholder="E-mail">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input required type="password" id="password" name="password" placeholder="Password">
+            </div>
+            <div>
+                <label for="date_of_birth">Date of birth:</label>
+                <input required type="date" id="date_of_birth" name="date_of_birth" placeholder="date_of_birth">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Additional Info</legend>
+            <p>Gender</p>
+            <div class="option">
+                <input type="radio" id="gender_male" name="gender" value="male">
+                <label for="gender_male">Male</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="gender_female" name="gender" value="female">
+                <label for="gender_female">Female</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="gender_other" name="gender" value="other">
+                <label for="gender_other">Other</label>
+            </div>
+            <p>Interests</p>
+            <div class="option">
+                <input type="checkbox" id="technology" name="interests[]" value="technology">
+                <label for="technology">Technology</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="sports" name="interests[]" value="sports">
+                <label for="sports">Sports</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="music" name="interests[]" value="music">
+                <label for="music">Music</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="games" name="interests[]" value="games">
+                <label for="games">Games</label>
+            </div>
+            <div>
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="united_states">United States</option>
+                    <option value="united_kingdom">United Kingdom</option>
+                    <option value="canada">Canada</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Other info</legend>
+            <div>
+                <label for="profile_picture">Profile picture</label>
+                <input type="file" id="profile_picture" name="profile_picture">
+            </div>
+            <div>
+                <label for="favorite_color">Favorite color</label>
+                <input type="color" id="favorite_color" name="favorite_color">
+            </div>
+            <div class="range-labels">
+                <label for="satisfaction_level">Satisfaction Level</label>
+                <input type="range" id="satisfaction_level" name="satisfaction_level" min="0" max="10" value="5">
+                <span>0</span>
+                <span>5</span>
+                <span>10</span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Bio</legend>
+            <div>
+                <label for="user_bio">Biography:</label>
+                <textarea id="user_bio" name="user_bio"></textarea>
+            </div>
+        </fieldset>
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+
+</html>

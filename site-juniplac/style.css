@@ -1,0 +1,186 @@
+
+   /* 1. Variáveis e Reset */
+:root {
+    --cor-primaria: #ff416c;
+    --cor-secundaria: #ff4b2b;
+    --cor-fundo: #f0f2f5;
+    --cor-texto: #333333;
+    --cor-texto-claro: #555555;
+    --cor-card: #ffffff;
+    --sombra-padrao: 0 8px 16px rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 12px 24px rgba(255, 65, 108, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Container para centralizar o layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho (Header) */
+.cabecalho {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: var(--sombra-padrao);
+}
+
+.cabecalho h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.cabecalho h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* Cards */
+.card {
+    background-color: var(--cor-card);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-padrao);
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+/* Corpo */
+.corpo img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.corpo h2 {
+    font-size: 2rem;
+    color: var(--cor-texto);
+    margin-bottom: 15px;
+}
+
+.corpo p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-claro);
+    margin-bottom: 20px;
+}
+
+.corpo h3 {
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 25px;
+}
+
+/* Botão de Inscrição */
+.linkinscricao {
+    display: inline-block;
+    background: linear-gradient(to right, var(--cor-primaria), var(--cor-secundaria));
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+}
+
+.linkinscricao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 65, 108, 0.6);
+}
+
+/* Modalidades */
+.modalidades h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.grid-modalidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.modalidade-item {
+    background-color: var(--cor-fundo);
+    color: var(--cor-secundaria);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ffe5eb;
+    transition: background-color 0.3s ease;
+}
+
+.modalidade-item:hover {
+    background-color: #ffe5eb;
+}
+
+/* Informações Extras */
+.info-extra {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed #eee;
+}
+
+.premiacao {
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+}
+
+.local {
+    font-size: 1.1rem;
+    color: var(--cor-texto-claro);
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    padding: 30px 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .cabecalho h1 {
+        font-size: 2.2rem;
+    }
+    .card {
+        padding: 25px 15px;
+    }
+}
+
+/* Código adaptado do portfólio */
