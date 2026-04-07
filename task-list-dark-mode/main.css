@@ -1,0 +1,242 @@
+:root {
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #d9d9d9;
+}
+
+/* Theme variables */
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --cardBg: rgba(255, 255, 255, 0.9);
+    --cardBorder: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+    --mutedText: #222222;
+    --taskBg: rgba(255, 255, 255, 0.7);
+    --danger: #b00020;
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --cardBg: #111111;
+    --cardBorder: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+    --mutedText: #cfcfcf;
+    --taskBg: #1b1b1b;
+    --danger: #ff5c5c;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+
+#msg {
+    font-size: 1rem;
+    color: var(--mutedText);
+}
+
+.card {
+    background: var(--cardBg);
+    border: 3px solid var(--cardBorder);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.task-section + .task-section {
+    margin-top: 28px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+}
+
+.task-form {
+    display: flex;
+    gap: 12px;
+}
+
+.task-input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 2px solid var(--cardBorder);
+    border-radius: 12px;
+    font-size: 1rem;
+    background: var(--taskBg);
+    color: var(--fontColor);
+}
+
+.task-input::placeholder {
+    color: var(--mutedText);
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    background: var(--taskBg);
+    border: 2px solid var(--cardBorder);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.task-text {
+    font-size: 1rem;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.task-item.done .task-text {
+    text-decoration: line-through;
+    opacity: 0.75;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.stat-box {
+    background: var(--taskBg);
+    border: 2px solid var(--cardBorder);
+    border-radius: 14px;
+    padding: 18px 12px;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: var(--mutedText);
+}
+
+.btn,
+.small-btn {
+    cursor: pointer;
+    border: 2px solid var(--cardBorder);
+    font-weight: 700;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn {
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    min-height: 56px;
+    min-width: 110px;
+    padding: 0 18px;
+    border-radius: 999px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.small-btn {
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    background: var(--btnBg);
+    color: var(--btnFontColor);
+}
+
+.delete-btn {
+    border-color: var(--danger);
+    color: var(--danger);
+    background: transparent;
+}
+
+.btn:hover,
+.small-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+    .topbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-form {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .task-actions .small-btn {
+        flex: 1;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
