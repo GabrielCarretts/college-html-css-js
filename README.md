@@ -2,9 +2,9 @@
 
 ## Description
 
-This repository contains a collection of projects developed while learning the fundamentals of web development. The focus is on building a solid understanding of HTML structure, CSS styling, and basic user interface design.
+This repository contains a collection of projects developed while learning the fundamentals of web development. The focus is on building a solid understanding of HTML, CSS, and JavaScript, along with basic user interface design.
 
-Each project explores different concepts such as forms, layouts, and responsive design, with an emphasis on clean code and progressive improvement.
+Each project explores different concepts such as forms, layouts, interactivity, and responsive design, with an emphasis on clean code and continuous improvement.
 
 ---
 
@@ -51,10 +51,26 @@ A responsive landing page for a university sports event.
 
 ---
 
+### 4. Task List App
+
+An interactive task management application with theme switching.
+
+**Concepts:**
+
+* JavaScript DOM manipulation
+* Event handling and event delegation
+* Dynamic element creation
+* Form handling with `preventDefault()`
+* UI state updates (task counters)
+* Theme switching using CSS classes
+
+---
+
 ## Technologies Used
 
 * HTML5
-* CSS3 (Flexbox, Grid, responsive design)
+* CSS3 (Flexbox, Grid, responsive design, variables)
+* JavaScript (DOM manipulation, events)
 
 ---
 
@@ -65,6 +81,7 @@ A responsive landing page for a university sports event.
 * Styling layouts with CSS
 * Improving UI/UX through spacing, alignment, and hierarchy
 * Building responsive and reusable components
+* Adding interactivity with JavaScript
 
 ---
 
